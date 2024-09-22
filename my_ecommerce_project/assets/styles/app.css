@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+.navbar {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-list li {
+    margin: 0 1em;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+.navbar-list a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.user-info .user-name {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-list a.active {
+    background-color: #04AA6D;
+    color: rgb(52, 255, 1);
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------------- */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: 'Sofadi One', system-ui;
+}
+
+/* -------------------------------------------------------- */
+
+.rounded-video {
+    width: 95vw; 
+    height: 40vh; 
+    border-radius: 0 30vh 70vh 0; 
+    display: block;
+    margin: 0; 
+    overflow: hidden; 
+    object-fit: cover; 
+    position: relative;
+    left: 0; 
+}
+
+/* -------------------------------------------------------- */
+
+.p1 {
+    padding: 5vh;
+}
+
+/* -------------------------------------------------------- */
+
+/* Styles pour l'image différée */
+.scroll-image {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-image.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* -------------------------------------------------------- */
+
+.ul1 {
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-list {
+    list-style-type: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Pour chaque élément de la liste */
+.image-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste la taille des images pour être responsive */
+.image-list img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    width: 30vw; 
+}

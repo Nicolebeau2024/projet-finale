@@ -24,31 +24,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
         </ul>
     </div>
 
-    <footer>
-        <!-- Contenu du footer -->
-        <div class="footer-image-container">
-            <img src="{{ asset('images/jaguar.jpg') }}" alt="Apparition Image" class="footer-image">
-        </div>
-    </footer>
+     <div class="scroll-image">
+        <img src="{{ asset('images/jaguar.jpg') }}" alt="Image Différée">
+    </div>
 
-    <script>
-        document.addEventListener('scroll', function() {
-    const footer = document.querySelector('footer');
-    const footerImage = document.querySelector('.footer-image');
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const footerPosition = footer.offsetTop;
-
-    console.log('Scroll Position:', scrollPosition);
-    console.log('Footer Position:', footerPosition);
-
-    if (scrollPosition > footerPosition - 200) {
-        footerImage.style.bottom = '0'; 
-        footerImage.style.opacity = '1'; 
-    } else {
-        footerImage.style.bottom = '-1px';
-        footerImage.style.opacity = '0';
-    }
-});
-
-    </script>
 {% endblock %}
