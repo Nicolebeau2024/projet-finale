@@ -1,6 +1,6 @@
 # projet finale M. Choteau Nicolas 22/09/2024
 
-Ecomerce par zoologique:
+Ecomerce parc zoologique:
 
-Symfony, Docker, BDD MySql (phpmyadmin), (no Sql à venir FireBase).
+Projet full stack : Symfony, Docker, BDD MySql (phpmyadmin), (no Sql à venir FireBase).
  
