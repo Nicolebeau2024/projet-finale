@@ -1,0 +1,38 @@
+PS H:\Dévelopeur WEB\Projet final> docker-compose exec db mysql -u user -p
+time="2024-09-08T17:48:07+02:00" level=warning msg="H:\\Dévelopeur WEB\\Projet final\\docker-compose.yml: `version` is obsolete"
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 5.7.44 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE symfony;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM user;
++----+--------------+-------+--------------------------------------------------------------+
+| id | email        | roles | password                                                     |
++----+--------------+-------+--------------------------------------------------------------+
+|  1 | test@test.fr | []    | $2y$13$SgPiQYqNquvi2YchGJ.yRef3HWcBWGqAjQfi4ZGLBMnQd4S5vY.KO |
++----+--------------+-------+--------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE user;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email    | varchar(180) | NO   | UNI | NULL    |                |
+| roles    | json         | NO   |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)

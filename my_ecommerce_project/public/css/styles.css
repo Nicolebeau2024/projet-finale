@@ -1,0 +1,141 @@
+.navbar {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-list li {
+    margin: 0 1em;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+.navbar-list a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.user-info .user-name {
+    color: white;
+    font-weight: bold;
+    
+}
+
+.navbar-list a.active {
+    background-color: #04AA6D;
+    color: rgb(52, 255, 1);
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------------- */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: "police";
+    
+}
+
+@font-face {
+        font-family: "police";
+        src: url('/fonts/SofadiOne-Regular.ttf') format('truetype');
+    }    
+  
+  
+
+.rounded-video {
+    width: 95vw; /* Vidéo occupe 90% de la largeur de la fenêtre */
+    height: 40vh; /* Vidéo occupe 30% de la hauteur de la fenêtre */
+    border-radius: 0 30vh 70vh 0; /* Arrondi sur le côté droit uniquement, en fonction de la hauteur */
+    display: block;
+    margin: 0; /* Supprime les marges pour que la vidéo touche le bord gauche */
+    overflow: hidden; /* Assure que le contenu reste à l'intérieur des bords arrondis */
+    object-fit: cover; /* Garde le contenu de la vidéo bien ajusté */
+    position: relative;
+    left: 0; /* Assure que la vidéo commence à gauche */
+}
+
+/* -------------------------------------------------------- */
+
+.p1 {
+    padding: 5vh;
+}
+
+
+
+/* -------------------------------------------------------- */
+
+footer {
+    height: 200px; /* Augmente la hauteur du footer temporairement */
+}
+
+.footer-image-container {
+    position: relative;
+    height: 300px; /* Augmenter la hauteur pour voir plus de l'image */
+    overflow: hidden; /* Garde le comportement pour cacher l'image quand elle dépasse */
+}
+
+
+.footer-image {
+    bottom: -150px; /* Cache l'image sous le footer au départ */
+    opacity: 0; /* Rend l'image invisible au départ */
+    transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+
+
+/* -------------------------------------------------------- */
+
+.ul1 {
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-list {
+    list-style-type: none; /* Supprime les puces de la liste */
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    flex-wrap: wrap; /* Permet à la liste de se répartir sur plusieurs lignes si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espace entre les éléments */
+    padding: 0;
+    margin: 0;
+}
+
+/* Pour chaque élément de la liste */
+.image-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste la taille des images pour être responsive */
+.image-list img {
+    max-width: 100%; /* Les images ne dépasseront pas la largeur de leur conteneur */
+    height: auto;
+    display: block;
+    width: 30vw; /* Taille fixe pour exemple, peut être ajustée */
+}

@@ -1,0 +1,16 @@
+{# templates/cart/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block body %}
+    <h1>Your Cart</h1>
+    <ul>
+        {% for product in cart.products %}
+            <li>
+                {{ product.name }} - {{ product.price }} €
+                <a href="{{ path('cart_remove', {'id': product.id}) }}">Remove</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

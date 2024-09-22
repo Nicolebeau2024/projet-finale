@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <ul class="navbar-list">
+        <li><a href="{{ path('homepage') }}">Home</a></li>
+        <li><a href="{{ path('product_list') }}">Products</a></li>
+        <li><a href="{{ path('cart_index') }}">Cart</a></li>
+        {% if app.user %}
+            <li class="user-info">Welcome, <span class="user-name">{{ app.user.userIdentifier }}</span>!</li>
+            <li><a href="{{ path('app_logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ path('app_login') }}">Login</a></li>
+            <li><a href="{{ path('app_register') }}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>
